@@ -15,15 +15,26 @@ const ingredients = [
 
 let ingredientsListRef = document.querySelector('#ingredients');
 
+const makeListOfIngredients = ingredients =>{
+  return ingredients.map(ingredient=>{
+    const listItem = document.createElement("li");
+    listItem.textContent = ingredient;
+    listItem.classList.add('item')
+  
+    return listItem;
+  });
+}
 
-const ingredientsListItems = ingredients.map(ingredient=>{
-  const listItem = document.createElement("li");
-  listItem.textContent = ingredient;
-  listItem.classList.add('item')
+const listOfIngredients = makeListOfIngredients(ingredients);
 
-  return listItem;
-});
+// const ingredientsListItems = ingredients.map(ingredient=>{
+//   const listItem = document.createElement("li");
+//   listItem.textContent = ingredient;
+//   listItem.classList.add('item')
 
-ingredientsListRef.append(...ingredientsListItems);
-console.log(...ingredientsListItems);
+//   return listItem;
+// });
+
+ingredientsListRef.append(...listOfIngredients);
+console.log(...listOfIngredients);
 
