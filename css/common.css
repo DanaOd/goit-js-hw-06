@@ -22,3 +22,14 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.image-style{
+  display: inline-block;
+  max-height: 300px;
+  max-width: 300px;
+
+}
+
+.list{
+  list-style: none;
+}
