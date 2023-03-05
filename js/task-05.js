@@ -5,9 +5,9 @@ console.log(inputEl, outputEl);
 
 let nameValue = '';
 
-inputEl.addEventListener('keydown', onKeyDownHandler);
+inputEl.addEventListener('input', onKeyDownHandler);
 
 function onKeyDownHandler(event) {
-  nameValue += event.key;
+  nameValue = event.currentTarget.value;
   outputEl.textContent = nameValue;
 }
