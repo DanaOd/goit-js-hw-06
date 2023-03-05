@@ -22,10 +22,6 @@ const galleryImagesMarkup = images  => {
     }).join('');
 }
 
-// const galleryImagesMarkup = images.map(image => {
-//   return `<li class = 'list'><img class = "image-style" src = "${image.url}" alt = "${image.alt}"></li>`
-// }).join('');
-
 const galleryImages = galleryImagesMarkup(images);
 
 console.log(galleryImages);
