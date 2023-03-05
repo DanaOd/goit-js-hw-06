@@ -16,14 +16,16 @@ const images = [
 const galleryRef = document.querySelector('.gallery');
 console.log(galleryRef);
 
-const galleryImagesMarkup = images  => {
-  return images.map(({url, alt}) => {
-      return `<li class = 'list'><img class = "image-style" src = "${url}" alt = "${alt}"></li>`
-    }).join('');
-}
+const galleryImagesMarkup = images => {
+  return images
+    .map(({ url, alt }) => {
+      return `<li class = 'list'><img class = "image-style" src = "${url}" alt = "${alt}"></li>`;
+    })
+    .join('');
+};
 
 const galleryImages = galleryImagesMarkup(images);
 
 console.log(galleryImages);
 
-galleryRef.insertAdjacentHTML("afterbegin", galleryImages);
+galleryRef.insertAdjacentHTML('afterbegin', galleryImages);
