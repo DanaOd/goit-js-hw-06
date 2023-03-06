@@ -13,12 +13,13 @@ function onBlurHandler(event) {
   let currentLength = inputRef.value.length;
 
   if (currentLength == Number(inputRef.dataset.length)) {
-    console.log(
-      'currentLength, currentLength',
-      currentLength,
-      Number(inputRef.dataset.length),
-    );
+    // console.log(
+    //   'currentLength, currentLength',
+    //   currentLength,
+    //   Number(inputRef.dataset.length),
+    // );
 
+    inputRef.classList.remove('invalid');
     inputRef.classList.add('valid');
   } else {
     inputRef.classList.add('invalid');
