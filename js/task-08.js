@@ -15,12 +15,11 @@ function onSubmitHandler(event) {
   let passwValue = event.currentTarget.elements.password.value;
 
   if (emailValue === '' || passwValue === '') {
-    return console.log('Please fill in all the fields!');
+    return alert('Please fill in all the fields!');
   } else {
     credentials.email = emailValue;
     credentials.password = passwValue;
     console.log(credentials);
-    refs.email.value = '';
-    refs.password.value = '';
+    refs.form.reset();
   }
 }
