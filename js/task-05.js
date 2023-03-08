@@ -10,4 +10,9 @@ inputEl.addEventListener('input', onKeyDownHandler);
 function onKeyDownHandler(event) {
   nameValue = event.currentTarget.value;
   outputEl.textContent = nameValue;
+  
+  if (nameValue === ""){
+    console.log('hi');
+    outputEl.textContent = "Anonymous";
+  }
 }
